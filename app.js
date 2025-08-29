@@ -14,6 +14,11 @@ app.use('/public', express.static(path.join(process.cwd(), "public")))
 
 
 
+import notificationRoutes from "./src/routers/notification.routes.js";
+
+app.use("/api/notifications", notificationRoutes);
+
+
 
 
 app.listen(5000, ()=>{
